@@ -1,24 +1,15 @@
 import { useState } from "react"
 import './style.css'
 
-
 const NewClubModal = ({ closeModal }) => {
-
 
     const [clubName, setClubName] = useState('')
 
-    // const onChange = (e) => {
-    //     setClubName(e.target.value)
-    // }
-
     const userClub = (e) => {
-
     setClubName(e.target.value)    
     }
 
-
     const teamSubmission = () => {
-
     }
 
     const closeDisplayModal = () => {
