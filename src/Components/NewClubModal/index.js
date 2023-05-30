@@ -11,9 +11,13 @@ const NewClubModal = ({ closeModal }) => {
     //     setClubName(e.target.value)
     // }
 
+    const userClub = (e) => {
+
+    setClubName(e.target.value)    
+    }
+
+
     const teamSubmission = () => {
-
-
 
     }
 
@@ -32,7 +36,7 @@ return (
             </div>
             <form onSubmit={teamSubmission}>
                 <label className="footer">
-                    <input className='textbox' type="text"/>
+                    <input onChange={userClub} className='textbox' type="text"/>
                 </label>
              </form>
             <div className="footer">
