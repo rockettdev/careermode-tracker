@@ -1,0 +1,61 @@
+
+.teamsbg {
+    background-image: url(../../Assets/bk/teamsbackground.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+    background-color: rgba(0,0,0, 0.4); 
+    box-shadow: 0 0 5px 10px #44ff00;
+}
+
+.navbar {
+    background-color: rgb(9, 12, 27);
+    width: 100vw;
+    height: 8vh;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.navoptions {
+    display: grid;
+    grid-template-rows: 60px 30px 1fr;
+}
+
+.navbuttonslist {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 1fr;
+}
+
+.title {
+    padding-top: 15px;
+    font-size: 30px;
+    opacity: 1;
+}
+
+.main {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.teamsmenu {
+    justify-self: center;
+    margin-top: 150px;
+    width: 70vw;
+    height: 65vh;
+    background-color: rgb(9, 12, 27);
+    opacity: 0.89;
+    border-radius: 30px;
+    box-shadow: 1px 2px 5px 5px black;
+    display: grid;
+    grid-template-rows: 75px 1fr;
+}
+
+.teamsmenuheader {
+    padding-top: 10px;
+}
