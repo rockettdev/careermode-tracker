@@ -1,0 +1,13 @@
+{
+    "teams": [
+        {
+            "clubname": "Chelsea FC",
+            "id": 1
+
+        },
+        {
+            "clubname": "Southampton FC",
+            "id": 2
+        }
+    ]
+}
