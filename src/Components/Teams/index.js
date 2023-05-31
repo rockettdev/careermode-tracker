@@ -29,8 +29,6 @@ function Teams() {
                 <div className='navoptions'>
                     <h1 className='title'> Career Mode Tracker </h1>
                     <div className='navbuttonslist'>
-                        <div>MY TEAMS</div>
-                        <div>NEW TEAM</div>
                     </div>
                 </div>
             </header>
