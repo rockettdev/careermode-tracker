@@ -35,11 +35,11 @@ function Teams() {
 
         <div className='main'>
             <section className='teamsmenu'>
-            {openModal && <NewClubModal closeModal={setOpenModal} />}
                 <div className='teamsmenuheader' >
                     <button className='basicbutton' onClick={() => {
                         setOpenModal(true);
                     }}> CREATE NEW TEAM </button>
+                    {openModal && <NewClubModal closeModal={setOpenModal} />}
                 </div>
                    { teams && <TeamsList teams={teams}/> } 
             </section>

@@ -7,6 +7,14 @@
     {
       "clubName": "Southampton FC",
       "id": 2
+    },
+    {
+      "clubName": "Vice City",
+      "id": 3
+    },
+    {
+      "clubName": "Test",
+      "id": 4
     }
   ]
 }
