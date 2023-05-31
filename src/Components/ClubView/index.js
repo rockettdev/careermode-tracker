@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {useParams} from "react-router-dom";
 import { useEffect } from 'react'
 import Club from "./clubviewmap";
+import './index.css'
 
 
 const ClubView = () => {
@@ -13,8 +14,6 @@ const ClubView = () => {
 
 
     useEffect(() => {
-
-        console.log('i fire once');
         fetch(`http://localhost:8000/teams/${id}`)
             .then(res => {
                 return res.json();
@@ -42,11 +41,9 @@ const ClubView = () => {
 
         <div className='main'>
             <section className='teamsmenu'>
-                <div className='teamsmenuheader' >
-                    Name: {clubData.clubName}
-
+                <div className='clubname' >
+                {clubData.clubName}
                 {/* {clubData && <Club club={clubData} />} */}
-                
                 </div>
             </section>
         </div>

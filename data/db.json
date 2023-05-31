@@ -1,8 +1,8 @@
 {
   "teams": [
     {
-      "clubName": "Chelsea FC",
-      "id": 1
+      "id": 1,
+      "clubName": "Chelsea FC"
     },
     {
       "clubName": "Manchester City",
