@@ -11,8 +11,6 @@ const ClubView = () => {
 
     const {id} = useParams();
 
-
-
     useEffect(() => {
         fetch(`http://localhost:8000/teams/${id}`)
             .then(res => {

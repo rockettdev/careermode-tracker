@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const TeamsList = ({ teams }) => {
 
     return (
@@ -5,15 +7,14 @@ const TeamsList = ({ teams }) => {
         
         <div className='teamslist'>
         {teams.map((team) => (
-            <a className="teamslist" href={`http://localhost:3000/teams/${team.id}`}>
+            <Link to={`/teams/${team.id}`} className='teamslist'>
                 <div>
                     { team.clubName }
                 </div>
-            </a>
+                </Link >
         ))
         }
         </div>
-
     )
 }
 
