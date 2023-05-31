@@ -81,3 +81,8 @@
 .teamslist > a {
     text-decoration: none;
 }
+
+.teamslist > div:hover {
+    background-color: rgb(7, 88, 181);
+    
+}

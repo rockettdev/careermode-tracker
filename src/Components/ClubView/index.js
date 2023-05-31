@@ -1,25 +1,32 @@
-import { useState } from 'react'
-import NewClubModal from '../NewClubModal/index.js'
-import TeamsList from '../TeamsListMap/index.js'
-import './teams.css'
+import React, { useState } from "react";
+import {useParams} from "react-router-dom";
 import { useEffect } from 'react'
+import Club from "./clubviewmap";
 
 
+const ClubView = () => {
 
-function Teams() {
+    const [clubData, setClubData] = useState({})
 
-    const [openModal, setOpenModal] = useState(false);
-    const [teams, setTeams] = useState(null)
+    const {id} = useParams();
+
+
 
     useEffect(() => {
-        fetch('http://localhost:8000/teams')
+
+        console.log('i fire once');
+        fetch(`http://localhost:8000/teams/${id}`)
             .then(res => {
                 return res.json();
             })
             .then(data => {
-                setTeams(data);
+                setClubData(data);
             })
-    }, [teams]);
+    }, [id]);
+
+
+    console.log(clubData)
+
 
     return (
         <>
@@ -36,12 +43,11 @@ function Teams() {
         <div className='main'>
             <section className='teamsmenu'>
                 <div className='teamsmenuheader' >
-                    <button className='basicbutton' onClick={() => {
-                        setOpenModal(true);
-                    }}> NEW TEAM </button>
-                    {openModal && <NewClubModal closeModal={setOpenModal} />}
+                    Name: {clubData.clubName}
+
+                {/* {clubData && <Club club={clubData} />} */}
+                
                 </div>
-                   { teams && <TeamsList teams={teams}/> } 
             </section>
         </div>
 
@@ -49,6 +55,8 @@ function Teams() {
         </>
 
     )
+
+
 }
 
-export default Teams
+export default ClubView

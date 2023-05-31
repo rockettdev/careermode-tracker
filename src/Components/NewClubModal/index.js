@@ -36,7 +36,7 @@ return (
                 <button onClick={closeDisplayModal}> X </button>
             </div>
             <div className="title">
-                <h1>Please enter your club name!</h1>
+                <h1>Please enter your club name</h1>
             </div>
             <form>
                 <label className="footer">
