@@ -5,7 +5,7 @@ const TeamsList = ({ teams }) => {
         <div className='teamslist'>
         {teams.map((team) => (
             <div>
-                <h2>{ team.clubName }</h2>
+                { team.clubName }
             </div>
         ))
         }
