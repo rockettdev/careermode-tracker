@@ -2,11 +2,14 @@ const TeamsList = ({ teams }) => {
 
     return (
 
+        
         <div className='teamslist'>
         {teams.map((team) => (
-            <div>
-                { team.clubName }
-            </div>
+            <a className="teamslist" href={`http://localhost:3000/teams/${team.id}`}>
+                <div>
+                    { team.clubName }
+                </div>
+            </a>
         ))
         }
         </div>
