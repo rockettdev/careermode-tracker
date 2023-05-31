@@ -1,12 +1,25 @@
 import { useState } from 'react'
 import NewClubModal from '../NewClubModal/index.js'
+import TeamsList from '../TeamsListMap/index.js'
 import './teams.css'
+import { useEffect } from 'react'
 
 
 
 function Teams() {
 
-    const [openModal, setOpenModal] = useState(false)
+    const [openModal, setOpenModal] = useState(false);
+    const [teams, setTeams] = useState(null)
+
+    useEffect(() => {
+        fetch('http://localhost:8000/teams')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setTeams(data);
+            })
+    }, [teams]);
 
     return (
         <>
@@ -30,12 +43,7 @@ function Teams() {
                         setOpenModal(true);
                     }}> CREATE NEW TEAM </button>
                 </div>
-                <div className='teamslist'>
-                    <div> yo </div>
-                    <div> yo 2</div>
-                    <div> yo </div>
-                    <div> yo </div>
-                </div>   
+                   { teams && <TeamsList teams={teams}/> } 
             </section>
         </div>
 
