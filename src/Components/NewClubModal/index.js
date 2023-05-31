@@ -20,6 +20,7 @@ const NewClubModal = ({ closeModal }) => {
             body: JSON.stringify(clubname)
         }).then(() => {
             console.log('new club added')
+            closeDisplayModal()
         })
     }
 
