@@ -1,13 +1,20 @@
 {
-    "teams": [
-        {
-            "clubname": "Chelsea FC",
-            "id": 1
-
-        },
-        {
-            "clubname": "Southampton FC",
-            "id": 2
-        }
-    ]
+  "teams": [
+    {
+      "clubName": "Chelsea FC",
+      "id": 1
+    },
+    {
+      "clubName": "Southampton FC",
+      "id": 2
+    },
+    {
+      "clubName": "ff",
+      "id": 3
+    },
+    {
+      "clubName": "Tottenham Hotspur",
+      "id": 4
+    }
+  ]
 }
