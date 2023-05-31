@@ -17,6 +17,7 @@ const NewClubModal = ({ closeModal }) => {
     }
 
 return (
+
     <div className="modalBg">
         <div className="modalContainer">
             <div className="titleCloseBtn">
@@ -36,7 +37,6 @@ return (
             </div>
         </div>
     </div>
-
 
     )
 }
