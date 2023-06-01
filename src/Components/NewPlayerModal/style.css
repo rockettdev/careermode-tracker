@@ -1,15 +1,16 @@
-.modalBackground {
+.modalplayerBg{
     width: 100vw;
     height: 100vh;
     background-color: rgba(200, 200, 200);
-    position: fixed;
+    position: absolute;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .modalContainer {
-    position: relative;
+  .modalplayerContainer {
+    position: absolute;
     width: 650px;
     height: 650px;
     border-radius: 12px;
@@ -22,7 +23,7 @@
   }
   
   
-  .modalContainer .title {
+  .modalplayerContainer .title {
     display: inline-block;
     text-align: center;
     margin-top: 10px;
@@ -50,14 +51,14 @@
     text-align: center;
   }
   
-  .modalContainer .footer {
+  .modalplayerContainer .footer {
     flex: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .modalContainer .footer button {
+  .modalplayerContainer .footer button {
     width: 150px;
     height: 45px;
     margin: 12px;

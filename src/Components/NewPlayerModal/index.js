@@ -31,8 +31,8 @@ const NewPlayerModal = ({ closeModal }) => {
 
 return (
 
-    <div className="modalBg">
-        <div className="modalContainer">
+    <div className="modalplayerBg">
+        <div className="modalplayerContainer">
             <div className="titleCloseBtn">
                 <button onClick={closeDisplayModal}> X </button>
             </div>
