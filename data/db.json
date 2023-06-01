@@ -15,6 +15,14 @@
     {
       "clubName": "L",
       "id": 4
+    },
+    {
+      "clubName": "Test",
+      "id": 5
+    },
+    {
+      "clubName": "t",
+      "id": 6
     }
   ]
 }

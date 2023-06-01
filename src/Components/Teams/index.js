@@ -19,7 +19,7 @@ function Teams() {
             .then(data => {
                 setTeams(data);
             })
-    }, [teams]);
+    }, []);
 
     return (
         <>

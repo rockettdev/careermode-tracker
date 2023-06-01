@@ -9,7 +9,7 @@ const NewClubModal = ({ closeModal }) => {
     setClubName(e.target.value)    
     }
 
-    const teamSubmission = (e) => {
+    const TeamSubmission = (e) => {
         e.preventDefault()
 
         const clubname = { clubName }
@@ -22,6 +22,7 @@ const NewClubModal = ({ closeModal }) => {
             console.log('new club added')
             closeDisplayModal()
         })
+
     }
 
     const closeDisplayModal = () => {
@@ -45,7 +46,7 @@ return (
              </form>
             <div className="footer">
                 <button onClick={closeDisplayModal} id="cancelBtn">Cancel</button>
-                <button onClick={teamSubmission}>Submit</button>
+                <button onClick={TeamSubmission}>Submit</button>
             </div>
         </div>
     </div>
