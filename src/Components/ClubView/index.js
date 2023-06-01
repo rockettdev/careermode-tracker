@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import {useParams} from "react-router-dom";
 import { useEffect } from 'react'
+import NewPlayerModal from "../NewPlayerModal";
 import './index.css'
 
 
 const ClubView = () => {
 
     const [clubData, setClubData] = useState({})
+    const [openModal, setOpenModal] = useState(false);
 
     const {id} = useParams();
 
@@ -41,7 +43,9 @@ const ClubView = () => {
                 <div className='clubname'>
                 {clubData.clubName}
                 {/* {clubData && <Club club={clubData} />} */}
-                <button onClick={} className="newplayer"> New Player </button>
+                <button onClick={() => {
+                        setOpenModal(true);}} className="newplayer"> New Player </button>
+                        {openModal && <NewPlayerModal closeModal={setOpenModal} />}
                 </div>
                 <div className="playerlist">
                     <div>Shush mate</div>
