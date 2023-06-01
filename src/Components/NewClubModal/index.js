@@ -12,12 +12,12 @@ const NewClubModal = ({ closeModal }) => {
     const TeamSubmission = (e) => {
         e.preventDefault()
 
-        const clubname = { clubName }
+        const clubinfo = { clubName, "players": {} }
 
         fetch('http://localhost:8000/teams', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(clubname)
+            body: JSON.stringify(clubinfo)
         }).then(() => {
             console.log('new club added')
             closeDisplayModal()
@@ -37,10 +37,10 @@ return (
                 <button onClick={closeDisplayModal}> X </button>
             </div>
             <div className="title">
-                <h1>Please enter your club name</h1>
+                <h1 className="pickclubname">Please enter your club name</h1>
             </div>
             <form>
-                <label className="footer">
+                <label className="clubform">
                     <input onChange={userClub} className='textbox' type="text"/>
                 </label>
              </form>

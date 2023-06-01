@@ -3,25 +3,53 @@ import './style.css'
 
 const NewPlayerModal = ({ closeModal }) => {
 
-    const [clubName, setClubName] = useState('')
+    const [playerName, setPlayerName] = useState('')
+    const [playerPos, setPlayerPos] = useState('')
+    const [playerNation, setPlayerNation] = useState('')
+    const [playerRating, setPlayerRating] = useState('')
+    const [playerPot, setPlayerPot] = useState('')
 
-    const userClub = (e) => {
-    setClubName(e.target.value)    
+    const playerNameForm = (e) => {
+    setPlayerName(e.target.value)    
     }
+
+    const playerPosForm = (e) => {
+        setPlayerPos(e.target.value)    
+        }
+        
+    const playerNationForm = (e) => {
+        setPlayerNation(e.target.value)    
+        }
+
+    const playerRatingForm = (e) => {
+        setPlayerRating(e.target.value)    
+        }
+    const playerPotForm = (e) => {
+        setPlayerPot(e.target.value)    
+        }
 
     const TeamSubmission = (e) => {
         e.preventDefault()
 
-        // const clubname = { clubName }
+        const playerInfo = {
+            "players": {
+                playerName: {
+                    playerPos,
+                    playerNation,
+                    playerRating,
+                    playerPot
+                }
+            }
+    }
 
-        // fetch('http://localhost:8000/teams', {
-        //     method: 'POST',
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify(clubname)
-        // }).then(() => {
-        //     console.log('new club added')
-        //     closeDisplayModal()
-        // })
+        fetch('http://localhost:8000/teams/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(playerInfo)
+        }).then(() => {
+            console.log('new club added')
+            closeDisplayModal()
+        })
 
     }
 
@@ -42,15 +70,15 @@ return (
             <form>
                 <label className="labels">
                     <p>Name:</p>
-                    <input onChange={userClub} className='textbox' type="text"/>
+                    <input onChange={playerNameForm} className='textboxplayer' type="text"/>
                     <p>Position:</p>
-                    <input onChange={userClub} className='textbox' type="text"/>
+                    <input onChange={playerPosForm} className='textboxplayer' type="text"/>
                     <p>Nationality:</p>
-                    <input onChange={userClub} className='textbox' type="text"/>
+                    <input onChange={playerNationForm} className='textboxplayer' type="text"/>
                     <p>Rating:</p>
-                    <input onChange={userClub} className='textbox' type="text"/>
+                    <input onChange={playerRatingForm} className='textboxplayer' type="text"/>
                     <p>Potential:</p>
-                    <input onChange={userClub} className='textbox' type="text"/>
+                    <input onChange={playerPotForm} className='textboxplayer' type="text"/>
                 </label>
 
              </form>

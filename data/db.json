@@ -5,24 +5,9 @@
       "clubName": "Chelsea FC"
     },
     {
-      "clubName": "Manchester City",
-      "id": 2
-    },
-    {
       "clubName": "Southampton FC",
-      "id": 3
-    },
-    {
-      "clubName": "L",
-      "id": 4
-    },
-    {
-      "clubName": "Test",
-      "id": 5
-    },
-    {
-      "clubName": "t",
-      "id": 6
+      "players": {},
+      "id": 2
     }
   ]
 }
