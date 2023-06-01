@@ -12,7 +12,7 @@ const NewClubModal = ({ closeModal }) => {
     const TeamSubmission = (e) => {
         e.preventDefault()
 
-        const clubinfo = { clubName, "players": {} }
+        const clubinfo = { clubName, "players": [] }
 
         fetch('http://localhost:8000/teams', {
             method: 'POST',

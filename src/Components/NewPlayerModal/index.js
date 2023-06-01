@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './style.css'
+import {useParams} from "react-router-dom";
 
 const NewPlayerModal = ({ closeModal }) => {
 
@@ -8,6 +9,8 @@ const NewPlayerModal = ({ closeModal }) => {
     const [playerNation, setPlayerNation] = useState('')
     const [playerRating, setPlayerRating] = useState('')
     const [playerPot, setPlayerPot] = useState('')
+
+    const {id} = useParams();
 
     const playerNameForm = (e) => {
     setPlayerName(e.target.value)    
@@ -32,17 +35,15 @@ const NewPlayerModal = ({ closeModal }) => {
         e.preventDefault()
 
         const playerInfo = {
-            "players": {
                 playerName: {
                     playerPos,
                     playerNation,
                     playerRating,
                     playerPot
                 }
-            }
     }
 
-        fetch('http://localhost:8000/teams/', {
+        fetch(`http://localhost:8000/teams/${id}/players`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(playerInfo)

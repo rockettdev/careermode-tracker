@@ -2,12 +2,25 @@
   "teams": [
     {
       "id": 1,
-      "clubName": "Chelsea FC"
+      "clubName": "yo",
+      "players": [
+        {
+          "alan": {
+            "potential": 90,
+            "rating": 82
+          }
+        }
+      ]
     },
     {
-      "clubName": "Southampton FC",
+      "clubName": "Chelsea FC",
       "players": {},
       "id": 2
+    },
+    {
+      "clubName": "Yo Fc",
+      "players": ["alan"],
+      "id": 3
     }
   ]
 }
