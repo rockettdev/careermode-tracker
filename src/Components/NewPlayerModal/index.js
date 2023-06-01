@@ -35,15 +35,16 @@ const NewPlayerModal = ({ closeModal }) => {
         e.preventDefault()
 
         const playerInfo = {
-                playerName: {
-                    playerPos,
-                    playerNation,
-                    playerRating,
-                    playerPot
+                    "id": null ,
+                    "teamId": id,
+                    "playerName": playerName,
+                    "playerPos": playerPos,
+                    "playerNation": playerNation,
+                    "playerRating": playerRating,
+                    "playerPot": playerPot
                 }
-    }
 
-        fetch(`http://localhost:8000/teams/${id}/players`, {
+        fetch(`http://localhost:8000/players`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(playerInfo)
@@ -51,9 +52,7 @@ const NewPlayerModal = ({ closeModal }) => {
             console.log('new club added')
             closeDisplayModal()
         })
-
     }
-
     const closeDisplayModal = () => {
         closeModal(false)
     }

@@ -83,6 +83,54 @@ const ClubView = () => {
                         <div> 0 </div>
                         <div> <button className='playerupdate'> UPDATE </button></div>
                     </section>
+                    <section> 
+                        <div></div>
+                        <div>Mykhailo Mudryk </div>
+                        <div> LW </div>
+                        <div className="rating"> 78 </div>
+                        <div className="potential"> 89 </div>
+                        <div> 170 </div>
+                        <div> 22 </div>
+                        <div> 45 </div>
+                        <div> 0 </div>
+                        <div> <button className='playerupdate'> UPDATE </button></div>
+                    </section>
+                    <section> 
+                        <div></div>
+                        <div> Enzo Fernandez </div>
+                        <div> CM </div>
+                        <div className="rating"> 83 </div>
+                        <div className="potential"> 91 </div>
+                        <div> 32 </div>
+                        <div> 15 </div>
+                        <div> 2 </div>
+                        <div> 0 </div>
+                        <div> <button className='playerupdate'> UPDATE </button></div>
+                    </section>
+                    <section> 
+                        <div></div>
+                        <div> Kepa Arrizabalaga </div>
+                        <div> GK </div>
+                        <div className="rating"> 84 </div>
+                        <div className="potential"> 88 </div>
+                        <div> 181 </div>
+                        <div> 0 </div>
+                        <div> 1 </div>
+                        <div> 56 </div>
+                        <div> <button className='playerupdate'> UPDATE </button></div>
+                    </section>
+                    <section> 
+                        <div></div>
+                        <div> Antonio Rudiger </div>
+                        <div> CB </div>
+                        <div className="rating"> 85 </div>
+                        <div className="potential"> 90 </div>
+                        <div> 171 </div>
+                        <div> 8 </div>
+                        <div> 3 </div>
+                        <div> 45 </div>
+                        <div> <button className='playerupdate'> UPDATE </button></div>
+                    </section>
                 </div>
             </section>
             <section className='records'>
@@ -103,13 +151,25 @@ const ClubView = () => {
                     <div className="recordplayer"> Mykhailo Mudryk - 45 Assists </div>
                 </div>
                 <div>
-                    <div>Most Goals Scored</div>
-                    <div className="recordplayer"> Joao Felix - 112 Goals </div>
+                    <div>Most Goal Contributions</div>
+                    <div className="recordplayer"> Joao Felix - 141 Goal Contributions </div>
                 </div>
-                <div> Most Goals Per Game Ratio </div>
-                <div> Most Clean Sheets </div>
-                <div> Most Red Cards </div>
-                <div> Most Yellow Cards </div>
+                <div>
+                    <div>Most Goals Per Game Ratio</div>
+                    <div className="recordplayer"> Enzo Fernandez - 0.47 Goals Per Game </div>
+                </div>
+                <div>
+                    <div>Most Clean Sheets</div>
+                    <div className="recordplayer"> Kepa Arrizabalaga - 56 Clean Sheets </div>
+                </div>
+                <div>
+                    <div>Most Red Cards</div>
+                    <div className="recordplayer"> Antonio Rudiger - 4 Red Cards </div>
+                </div>
+                <div>
+                    <div>Most Yellow Cards</div>
+                    <div className="recordplayer"> Antonio Rudiger - 12 Yellow Cards </div>
+                </div>
 
             </div>
             </section>

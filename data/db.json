@@ -2,25 +2,54 @@
   "teams": [
     {
       "id": 1,
-      "clubName": "yo",
-      "players": [
-        {
-          "alan": {
-            "potential": 90,
-            "rating": 82
-          }
-        }
-      ]
+      "clubName": "Chelsea FC"
     },
     {
-      "clubName": "Chelsea FC",
-      "players": {},
+      "clubName": "Yo",
       "id": 2
+    }
+  ],
+  "players": [
+    {
+      "teamId": 1,
+      "playerName": "Mykhailo Mudryk",
+      "ovr": 78
     },
     {
-      "clubName": "Yo Fc",
-      "players": ["alan"],
-      "id": 3
+      "teamId": 2,
+      "playerName": "Mcdonalds Alan",
+      "ovr": 20
+    },
+    {
+      "id": 1,
+      "teamId": "1",
+      "playerName": "f",
+      "playerPos": "f",
+      "playerNation": "f",
+      "playerRating": "f",
+      "playerPot": "f"
+    },
+    {
+      "id": 2,
+      "teamId": "1",
+      "playerName": "f",
+      "playerPos": "f",
+      "playerNation": "f",
+      "playerRating": "f",
+      "playerPot": "f"
+    },
+    {
+      "id": 3,
+      "teamId": "2",
+      "playerName": "ss",
+      "playerPos": "ss",
+      "playerNation": "ss",
+      "playerRating": "ss",
+      "playerPot": "ss"
+    },
+    {
+      "teamId": "2",
+      "id": 4
     }
   ]
 }
