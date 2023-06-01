@@ -1,6 +1,37 @@
 .clubname {
+    display: grid;
+    align-items: center;
+    justify-items: center;
     color: white;
     font-size: 40px;
     font-weight: 600;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.newplayer {
+    margin-top: -10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.playerlist {
+    color: white;
+    display: grid;
+    grid-template-rows: repeat( auto-fill, minmax(50px, 2fr) );
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px grey;
+    border-radius: 15px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(5, 31, 126);
+    border-radius: 5px;
+  }

@@ -1,17 +1,18 @@
 const Club = ({ club }) => {
 
-    return (
-
-        
+    return (     
+        <>
         <div>
         {club.map((team) => (
                 <div>
                     Name: { team.clubName }
                 </div>
-        ))
-        }
+        ))}
         </div>
-
+        <div>
+            sssssssssssss
+        </div>
+        </>
     )
 }
 

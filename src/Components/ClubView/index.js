@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {useParams} from "react-router-dom";
 import { useEffect } from 'react'
-import Club from "./clubviewmap";
 import './index.css'
 
 
@@ -39,9 +38,34 @@ const ClubView = () => {
 
         <div className='main'>
             <section className='teamsmenu'>
-                <div className='clubname' >
+                <div className='clubname'>
                 {clubData.clubName}
                 {/* {clubData && <Club club={clubData} />} */}
+                <button onClick={} className="newplayer"> New Player </button>
+                </div>
+                <div className="playerlist">
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>
+                    <div>Shush mate</div>   
                 </div>
             </section>
         </div>
