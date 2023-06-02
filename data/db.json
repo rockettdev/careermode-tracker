@@ -11,45 +11,18 @@
   ],
   "players": [
     {
-      "teamId": 1,
-      "playerName": "Mykhailo Mudryk",
-      "ovr": 78
-    },
-    {
-      "teamId": 2,
-      "playerName": "Mcdonalds Alan",
-      "ovr": 20
-    },
-    {
       "id": 1,
       "teamId": "1",
-      "playerName": "f",
-      "playerPos": "f",
-      "playerNation": "f",
-      "playerRating": "f",
-      "playerPot": "f"
-    },
-    {
-      "id": 2,
-      "teamId": "1",
-      "playerName": "f",
-      "playerPos": "f",
-      "playerNation": "f",
-      "playerRating": "f",
-      "playerPot": "f"
-    },
-    {
-      "id": 3,
-      "teamId": "2",
-      "playerName": "ss",
-      "playerPos": "ss",
-      "playerNation": "ss",
-      "playerRating": "ss",
-      "playerPot": "ss"
-    },
-    {
-      "teamId": "2",
-      "id": 4
+      "playerName": "Joao Felix",
+      "playerPos": "CF",
+      "playerRating": "84",
+      "playerPot": "92",
+      "gamesPlayed": 0,
+      "goalsScored": 0,
+      "goalsAssisted": 0,
+      "cleanSheets": 0,
+      "redCards": 0,
+      "yellowCards": 0
     }
   ]
 }

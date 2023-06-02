@@ -6,7 +6,6 @@ const NewPlayerModal = ({ closeModal }) => {
 
     const [playerName, setPlayerName] = useState('')
     const [playerPos, setPlayerPos] = useState('')
-    const [playerNation, setPlayerNation] = useState('')
     const [playerRating, setPlayerRating] = useState('')
     const [playerPot, setPlayerPot] = useState('')
 
@@ -18,10 +17,6 @@ const NewPlayerModal = ({ closeModal }) => {
 
     const playerPosForm = (e) => {
         setPlayerPos(e.target.value)    
-        }
-        
-    const playerNationForm = (e) => {
-        setPlayerNation(e.target.value)    
         }
 
     const playerRatingForm = (e) => {
@@ -39,9 +34,14 @@ const NewPlayerModal = ({ closeModal }) => {
                     "teamId": id,
                     "playerName": playerName,
                     "playerPos": playerPos,
-                    "playerNation": playerNation,
                     "playerRating": playerRating,
-                    "playerPot": playerPot
+                    "playerPot": playerPot,
+                    "gamesPlayed": 0,
+                    "goalsScored": 0,
+                    "goalsAssisted": 0,
+                    "cleanSheets": 0,
+                    "redCards": 0,
+                    "yellowCards": 0
                 }
 
         fetch(`http://localhost:8000/players`, {
@@ -73,8 +73,6 @@ return (
                     <input onChange={playerNameForm} className='textboxplayer' type="text"/>
                     <p>Position:</p>
                     <input onChange={playerPosForm} className='textboxplayer' type="text"/>
-                    <p>Nationality:</p>
-                    <input onChange={playerNationForm} className='textboxplayer' type="text"/>
                     <p>Rating:</p>
                     <input onChange={playerRatingForm} className='textboxplayer' type="text"/>
                     <p>Potential:</p>

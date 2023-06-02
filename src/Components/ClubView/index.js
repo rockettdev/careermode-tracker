@@ -8,6 +8,7 @@ import './index.css'
 const ClubView = () => {
 
     const [clubData, setClubData] = useState({})
+    const [playerData, setPlayerData] = useState({})
     const [openModal, setOpenModal] = useState(false);
 
     const {id} = useParams();
@@ -22,8 +23,19 @@ const ClubView = () => {
             })
     }, [id]);
 
+    useEffect(() => {
+        fetch(`http://localhost:8000/teams/${id}/players`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setPlayerData(data);
+            })
+    }, [id]);
+
 
     console.log(clubData)
+    console.log(playerData)
 
 
     return (
