@@ -1,4 +1,8 @@
-const RenderPlayerList = ({ players }) => {
+import { useState } from "react";
+
+const RenderPlayerList = ({ players, UpdatePlayerModal }) => {
+
+    const [openPlayerModal, setOpenPlayerModal] = useState(false)
 
     return (     
         <>
@@ -30,7 +34,11 @@ const RenderPlayerList = ({ players }) => {
                     <div>
                         { player.cleanSheets }
                     </div>
-                    <div> <button className="playerupdate"> UPDATE </button></div>
+                    <div> <button onClick={() => {
+                        setOpenPlayerModal(true);}} className="playerupdate"> UPDATE </button>
+                        {openPlayerModal && <UpdatePlayerModal closeModal={setOpenPlayerModal} />}
+                        </div>
+                        
                 </>
             ))}
         </section>

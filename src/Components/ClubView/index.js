@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import NewPlayerModal from "../NewPlayerModal";
 import RenderPlayerList from "./playermap";
 import './index.css'
+import UpdatePlayerModal from "../UpdatePlayerModal";
 
 
 const ClubView = () => {
@@ -51,7 +52,8 @@ const ClubView = () => {
                 </div>
             </header>
 
-        <div className='main'>
+        <div className='mainclub'>
+            <div></div>
             <section className='clubsmenu'>
                 <div className='clubname'>
                 {clubData.clubName}
@@ -71,7 +73,7 @@ const ClubView = () => {
                         <div> Assists </div>
                         <div> Clean Sheets </div>
                     </section>
-                    {playerData && <RenderPlayerList players={playerData}/>}
+                    {playerData && <RenderPlayerList  UpdatePlayerModal={UpdatePlayerModal} players={playerData}/>}
                 </div>
             </section>
             <section className='records'>
@@ -111,7 +113,6 @@ const ClubView = () => {
                     <div>Most Yellow Cards</div>
                     <div className="recordplayer"> Antonio Rudiger - 12 Yellow Cards </div>
                 </div>
-
             </div>
             </section>
         </div>
