@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import {useParams} from "react-router-dom";
 import { useEffect } from 'react'
 import NewPlayerModal from "../NewPlayerModal";
+import RenderPlayerList from "./playermap";
 import './index.css'
 
 
 const ClubView = () => {
 
     const [clubData, setClubData] = useState({})
-    const [playerData, setPlayerData] = useState({})
+    const [playerData, setPlayerData] = useState(null)
     const [openModal, setOpenModal] = useState(false);
 
     const {id} = useParams();
@@ -21,7 +22,7 @@ const ClubView = () => {
             .then(data => {
                 setClubData(data);
             })
-    }, [id]);
+    }, [clubData, id]);
 
     useEffect(() => {
         fetch(`http://localhost:8000/teams/${id}/players`)
@@ -31,7 +32,7 @@ const ClubView = () => {
             .then(data => {
                 setPlayerData(data);
             })
-    }, [id]);
+    }, [playerData, id]);
 
 
     console.log(clubData)
@@ -54,7 +55,6 @@ const ClubView = () => {
             <section className='clubsmenu'>
                 <div className='clubname'>
                 {clubData.clubName}
-                {/* {clubData && <Club club={clubData} />} */}
                 <button onClick={() => {
                         setOpenModal(true);}} className="newplayer"> New Player </button>
                         {openModal && <NewPlayerModal closeModal={setOpenModal} />}
@@ -71,78 +71,7 @@ const ClubView = () => {
                         <div> Assists </div>
                         <div> Clean Sheets </div>
                     </section>
-                    <section>
-                        <div></div>
-                        <div> Joao Felix </div>
-                        <div> CF </div>
-                        <div className="rating"> 82 </div>
-                        <div className="potential"> 90 </div>
-                        <div> 302 </div>
-                        <div> 112 </div>
-                        <div> 29 </div>
-                        <div> 0 </div>
-                        <div> <button className="playerupdate"> UPDATE </button></div>
-                    </section>
-                    <section> 
-                        <div></div>
-                        <div>Raheem Sterling </div>
-                        <div> LW </div>
-                        <div className="rating"> 84 </div>
-                        <div className="potential"> 87 </div>
-                        <div> 119 </div>
-                        <div> 37 </div>
-                        <div> 19 </div>
-                        <div> 0 </div>
-                        <div> <button className='playerupdate'> UPDATE </button></div>
-                    </section>
-                    <section> 
-                        <div></div>
-                        <div>Mykhailo Mudryk </div>
-                        <div> LW </div>
-                        <div className="rating"> 78 </div>
-                        <div className="potential"> 89 </div>
-                        <div> 170 </div>
-                        <div> 22 </div>
-                        <div> 45 </div>
-                        <div> 0 </div>
-                        <div> <button className='playerupdate'> UPDATE </button></div>
-                    </section>
-                    <section> 
-                        <div></div>
-                        <div> Enzo Fernandez </div>
-                        <div> CM </div>
-                        <div className="rating"> 83 </div>
-                        <div className="potential"> 91 </div>
-                        <div> 32 </div>
-                        <div> 15 </div>
-                        <div> 2 </div>
-                        <div> 0 </div>
-                        <div> <button className='playerupdate'> UPDATE </button></div>
-                    </section>
-                    <section> 
-                        <div></div>
-                        <div> Kepa Arrizabalaga </div>
-                        <div> GK </div>
-                        <div className="rating"> 84 </div>
-                        <div className="potential"> 88 </div>
-                        <div> 181 </div>
-                        <div> 0 </div>
-                        <div> 1 </div>
-                        <div> 56 </div>
-                        <div> <button className='playerupdate'> UPDATE </button></div>
-                    </section>
-                    <section> 
-                        <div></div>
-                        <div> Antonio Rudiger </div>
-                        <div> CB </div>
-                        <div className="rating"> 85 </div>
-                        <div className="potential"> 90 </div>
-                        <div> 171 </div>
-                        <div> 8 </div>
-                        <div> 3 </div>
-                        <div> 45 </div>
-                        <div> <button className='playerupdate'> UPDATE </button></div>
-                    </section>
+                    {playerData && <RenderPlayerList players={playerData}/>}
                 </div>
             </section>
             <section className='records'>

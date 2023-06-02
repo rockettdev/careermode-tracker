@@ -23,6 +23,34 @@
       "cleanSheets": 0,
       "redCards": 0,
       "yellowCards": 0
+    },
+    {
+      "id": 2,
+      "teamId": "1",
+      "playerName": "Kepa Arrizabalaga",
+      "playerPos": "GK",
+      "playerRating": "84",
+      "playerPot": "88",
+      "gamesPlayed": 0,
+      "goalsScored": 0,
+      "goalsAssisted": 0,
+      "cleanSheets": 0,
+      "redCards": 0,
+      "yellowCards": 0
+    },
+    {
+      "id": 3,
+      "teamId": "1",
+      "playerName": "Mykhailo Mudryk",
+      "playerPos": "LW",
+      "playerRating": "78",
+      "playerPot": "87",
+      "gamesPlayed": 0,
+      "goalsScored": 0,
+      "goalsAssisted": 0,
+      "cleanSheets": 0,
+      "redCards": 0,
+      "yellowCards": 0
     }
   ]
 }
