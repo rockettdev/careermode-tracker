@@ -10,6 +10,7 @@ const TeamsList = ({ teams }) => {
             <Link to={`/teams/${team.id}`} className='teamslist'>
                 <div>
                     { team.clubName }
+                    <img className='clublogo' src={team.clubUrl} alt='' height="140"></img>
                 </div>
                 </Link >
         ))

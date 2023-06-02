@@ -2,11 +2,23 @@
   "teams": [
     {
       "id": 1,
-      "clubName": "Chelsea FC"
+      "clubName": "Chelsea FC",
+      "clubUrl": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"
     },
     {
-      "clubName": "Yo",
-      "id": 2
+      "clubName": "Southampton FC",
+      "clubUrl": "https://upload.wikimedia.org/wikipedia/hif/8/85/FC_Southampton.png",
+      "id": 4
+    },
+    {
+      "clubName": "Bristol Rovers FC",
+      "clubUrl": "https://images.pitchero.com/club_logos/73178/FsyWkQsRs6ZAqn3PHtDj_BristolRoversSupporters.png",
+      "id": 5
+    },
+    {
+      "clubName": "Tottenham Hotspur",
+      "clubUrl": "https://upload.wikimedia.org/wikipedia/hif/6/6d/Tottenham_Hotspur.png",
+      "id": 7
     }
   ],
   "players": [
@@ -45,7 +57,21 @@
       "playerPos": "LW",
       "playerRating": "78",
       "playerPot": "87",
-      "gamesPlayed": 0,
+      "gamesPlayed": "10",
+      "goalsScored": 0,
+      "goalsAssisted": 0,
+      "cleanSheets": 0,
+      "redCards": 0,
+      "yellowCards": 0
+    },
+    {
+      "id": 4,
+      "teamId": "1",
+      "playerName": "Antonio Rudiger",
+      "playerPos": "CB",
+      "playerRating": "85",
+      "playerPot": "90",
+      "gamesPlayed": "300",
       "goalsScored": 0,
       "goalsAssisted": 0,
       "cleanSheets": 0,

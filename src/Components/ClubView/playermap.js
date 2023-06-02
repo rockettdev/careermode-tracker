@@ -36,7 +36,7 @@ const RenderPlayerList = ({ players, UpdatePlayerModal }) => {
                     </div>
                     <div> <button onClick={() => {
                         setOpenPlayerModal(true);}} className="playerupdate"> UPDATE </button>
-                        {openPlayerModal && <UpdatePlayerModal closeModal={setOpenPlayerModal} />}
+                        {openPlayerModal && <UpdatePlayerModal playerId={player.id} closeModal={setOpenPlayerModal} />}
                         </div>
                         
                 </>

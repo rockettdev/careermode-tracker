@@ -4,15 +4,20 @@ import './style.css'
 const NewClubModal = ({ closeModal }) => {
 
     const [clubName, setClubName] = useState('')
+    const [clubUrl, setClubUrl] = useState('')
 
     const userClub = (e) => {
     setClubName(e.target.value)    
     }
 
+    const clubLogo = (e) => {
+        setClubUrl(e.target.value)    
+        }
+
     const TeamSubmission = (e) => {
         e.preventDefault()
 
-        const clubinfo = { clubName }
+        const clubinfo = { clubName, clubUrl }
 
         fetch('http://localhost:8000/teams', {
             method: 'POST',
@@ -41,7 +46,8 @@ return (
             </div>
             <form>
                 <label className="clubform">
-                    <input onChange={userClub} className='textbox' type="text"/>
+                    <input onChange={userClub} className='textbox' placeholder="Club Name" type="text"/>
+                    <input onChange={clubLogo} className='textbox' placeholder="Club Logo URL" type="text"/>
                 </label>
              </form>
             <div className="footer">

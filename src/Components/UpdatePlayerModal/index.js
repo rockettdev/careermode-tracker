@@ -2,17 +2,17 @@ import { useState } from "react"
 import './style.css'
 import {useParams} from "react-router-dom";
 
-const UpdatePlayerModal = ({ closeModal }) => {
+const UpdatePlayerModal = ({ closeModal, playerId }) => {
 
-    const [playerName, setPlayerName] = useState('')
+    const [gamesPlayed, setGamesPlayed] = useState('')
     const [playerPos, setPlayerPos] = useState('')
     const [playerRating, setPlayerRating] = useState('')
     const [playerPot, setPlayerPot] = useState('')
 
-    const {id} = useParams();
+    const {id: teamId} = useParams();
 
-    const playerNameForm = (e) => {
-    setPlayerName(e.target.value)    
+    const gamesPlayedForm = (e) => {
+    setGamesPlayed(e.target.value)    
     }
 
     const playerPosForm = (e) => {
@@ -30,13 +30,7 @@ const UpdatePlayerModal = ({ closeModal }) => {
         e.preventDefault()
 
         const playerInfo = {
-                    "id": null ,
-                    "teamId": id,
-                    "playerName": playerName,
-                    "playerPos": playerPos,
-                    "playerRating": playerRating,
-                    "playerPot": playerPot,
-                    "gamesPlayed": 0,
+                    "gamesPlayed": gamesPlayed,
                     "goalsScored": 0,
                     "goalsAssisted": 0,
                     "cleanSheets": 0,
@@ -44,12 +38,12 @@ const UpdatePlayerModal = ({ closeModal }) => {
                     "yellowCards": 0
                 }
 
-        fetch(`http://localhost:8000/players`, {
-            method: 'POST',
+        fetch(`http://localhost:8000/players/${playerId}`, {
+            method: 'PATCH',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(playerInfo)
         }).then(() => {
-            console.log('new club added')
+            console.log('Player Stats Updated')
             closeDisplayModal()
         })
     }
@@ -70,7 +64,7 @@ return (
             <form>
                 <label className="labels">
                     <p>Games Played:</p>
-                    <input onChange={playerNameForm} className='textboxplayer' type="text"/>
+                    <input onChange={gamesPlayedForm} className='textboxplayer' type="text"/>
                     <p>Goals Scored:</p>
                     <input onChange={playerPosForm} className='textboxplayer' type="text"/>
                     <p>Goals Assisted:</p>

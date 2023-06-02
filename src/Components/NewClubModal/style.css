@@ -76,7 +76,7 @@
   }
 
   .textbox {
-    margin-top: 30px;
+    margin-bottom: 30px;
     width: 300px;
     height: 50px;
     font-size: 30px;
@@ -88,5 +88,7 @@
   }
 
   .clubform {
-    height: 100px
+    display: grid;
+    height: 100px;
+    padding-left: 172px;
   }
