@@ -1,19 +1,16 @@
-const Club = ({ club }) => {
+const RenderPlayerList = ({ players }) => {
 
     return (     
         <>
         <div>
-        {club.map((team) => (
+        {players.map((player) => (
                 <div>
-                    Name: { team.clubName }
+                    Name: { player.clubName }
                 </div>
         ))}
-        </div>
-        <div>
-            sssssssssssss
         </div>
         </>
     )
 }
 
-export default Club
+export default RenderPlayerList
