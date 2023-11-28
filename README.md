@@ -1,4 +1,4 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/EA_Sports_FC_24_logo.svg/2560px-EA_Sports_FC_24_logo.svg.png" height="200" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/EA_Sports_FC_24_logo.svg/2560px-EA_Sports_FC_24_logo.svg.png" height="100" />
 
 
 
