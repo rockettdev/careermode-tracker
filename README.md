@@ -27,4 +27,4 @@ A Web Application designed to provide FIFA/EAFC 24's hardcore career players wit
 
 ## Screenshots
 
-Coming Soong
+Coming Soon
