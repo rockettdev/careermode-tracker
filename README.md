@@ -4,7 +4,7 @@
 
 # FIFA Career Mode Tracker Webapp
 
-A Web Application designed to provide FIFA/EAFC 24's hardcore career players with a solution to EA's lack of stat tracking for the Career Gamemode
+A Full-Stack Web Application designed to provide FIFA/EAFC 24's hardcore career players with a solution to EA's lack of stat tracking for the Career Gamemode
 
 
 ## Tech Stack
@@ -23,7 +23,7 @@ A Web Application designed to provide FIFA/EAFC 24's hardcore career players wit
 - Users can add a custom team logo to their tean
 - Ability to add any chosen player a selected team and input all relevant stats for each player
 - Smooth and User Friendly UI
-- Backend Progress (Soon)
+- JSON Database Storage Capability
 
 ## Screenshots
 
